@@ -10,7 +10,7 @@
 
 <h2 id="context">📖 Contextualização</h2>
 
-<p>Este projeto faz parte de um desafio proposto para uma vaga de estágio, com o objetivo de demonstrar habilidades no desenvolvimento de APIs RESTful utilizando Spring Boot, além de boas práticas como uso de DTOs e mapeamento com ModelMapper</p>
+<p>Este projeto faz parte de um desafio proposto para uma vaga de estágio, com o objetivo de demonstrar habilidades no desenvolvimento de APIs RESTful utilizando Spring Boot, além de boas práticas como uso de DTOs e mapeamento com Mapper</p>
 
 <p>Ele permite o cadastramento (Inserir), a listagem (Consultar todos), a exclusão (Deletar), a pesquisa (Consultar por ID) e a alteração (Atualizar) de clientes de acordo com a modelagem abaixo:</p>
 
