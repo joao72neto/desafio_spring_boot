@@ -8,7 +8,7 @@
  <a href="#bd">Banco de Dados</a>
 </p>
 
-<h2 id="context">Contextualização</h2>
+<h2 id="context">📖 Contextualização</h2>
 
 <p>Este projeto faz parte de um desafio proposto para uma vaga de estágio, com o objetivo de demonstrar habilidades no desenvolvimento de APIs RESTful utilizando Spring Boot, além de boas práticas como uso de DTOs e mapeamento com ModelMapper</p>
 
@@ -27,7 +27,7 @@ Os seguintes requisitos foram atendidos:
 Abaixo estão listadas todas as tecnologias utilizadas para a realização deste desafio:
 
 - Java / Spring Boot
-- Maper
+- Mapper
 - Lombok
 - JPA / Hibernate
 - Oracle 21c Express
@@ -42,7 +42,7 @@ Abaixo estão listadas todas as tecnologias utilizadas para a realização deste
 <p>O SGBD utilizado neste projeto foi o Oracle, mas caso queira mudar e utilizar outro, basta modificar o arquivo application.properties. Mais abaixo disponibilizei a <a href="#mysql">configuração para o MySQL</a>.
 </p>
 
-<p>Para testar os endpoints, pode-se utilizar softwares que fazem requisições HTTP como insomnia (o qual foi usado para demonstrar os exemplos na seção de endpoints abaixo) ou postman.</p>
+<p>Para testar os endpoints, pode-se utilizar softwares de requisições HTTP como Insomnia ou Postman.</p>
 
 ### Pré-requisitos
 
@@ -98,7 +98,7 @@ Execute o arquivo que se encontra no caminho abaixo usando o vs code ou uma IDE:
 
 `clientes/src/main/java/desafio/cliente/ClienteApplication.java`
 
-<h2 id="end">Endpoints</h2>
+<h2 id="end">🔗 Endpoints</h2>
 
 | Método HTTP | Endpoint                | Descrição                 | Código de Resposta     |
 |-------------|-------------------------|---------------------------|------------------------|
@@ -380,7 +380,7 @@ Deletando o usuário com ID 1 (João):
 
 `/clientes/delete/1`
 
-<h2 id="bd">Banco de Dados</h2>
+<h2 id="bd">📂 Banco de Dados</h2>
 
 Confira abaixo como os dados ficam organizados no banco de dados:
 
