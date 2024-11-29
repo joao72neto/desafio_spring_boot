@@ -1,10 +1,13 @@
 <h1 align="center" style="font-weight: bold;">Desafio Spring Boot <img src="https://devkico.itexto.com.br/wp-content/uploads/2014/08/spring-boot-project-logo.png" width=30px></h1> 
 
 <p align="center">
- <a href="#end">Endpoints</a> •
+ <a href="#context">Contextualização</a> •
+ <a href="#tech">Tecnologias</a> •
+ <a href="#begin">Primeiros Passos</a> •
+ <a href="#end">Endpoints</a>
 </p>
 
-<hr>
+<h2 id="context">Contextualização</h2>
 
 Projeto back-end Spring Boot que permite o cadastramento (Inserir), a listagem (Consultar todos), a exclusão (Deletar), a pesquisa (Consultar por ID) e a alteração (Atualizar) de clientes seguindo a modelagem abaixo:
 
@@ -16,6 +19,26 @@ Os seguintes requisitos foram atendidos:
 - Ser uma API Restful
 - Usar DTO
 - Usar Mapper
+
+<h2 id="tech">💻 Tecnologias</h2>
+
+Abaixo estão listadas todas as tecnologias utilizadas para a realização deste desafio:
+
+- Java / Spring Boot
+- Oralce 21c Express
+- Git
+
+<h2 id="begin">🚀 Primeiros Passos</h2>
+
+<p>Para rodar o projeto localmente, você pode optar por simplesmente cloná-lo, abri-lo em uma IDE como intellij ou um editor de código como o visual studio e rodar o ClienteApplication.java</p>
+
+<p>Para testar os endpoints, pode-se usar softwares que fazem requisições HTTP como insomnia (o qual foi usado para demonstrar os exemplos na seção de endpoints abaixo) ou postman.</p>
+
+##Pré-requisitos
+
+- [insomnia]() ou [postman]()
+- Visual Studio Code
+- 
 
 <h2 id="end">Endpoints</h2>
 
