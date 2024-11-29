@@ -96,13 +96,14 @@ Executar o arquivo que se encontra no caminho abaixo usando o Vs code ou uma IDE
 
 <h2 id="end">Endpoints</h2>
 
-| Método HTTP | Endpoint                | Descrição                 |
-|-------------|-------------------------|---------------------------|
-| GET         | `/clientes/listall`     | Consultar todos os clientes. [exemplo](#con_all) |
-| GET         | `/clientes/list/{id}`   | Consultar cliente por ID. [exemplo](#con_id)    |
-| DELETE      | `/clientes/delete/{id}` | Deletar cliente pelo ID. [exemplo](#delete)     |
-| PUT         | `/clientes/update`      | Atualizar dados de um cliente. [exemplo](#update)|
-| POST        | `/clientes/add`         | Inserir um novo cliente. [exemplo](#insert)     |
+| Método HTTP | Endpoint                | Descrição                 | Código de Resposta     |
+|-------------|-------------------------|---------------------------|------------------------|
+| GET         | `/clientes/listall`     | Consultar todos os clientes. [exemplo](#con_all) | 200 OK |
+| GET         | `/clientes/list/{id}`   | Consultar cliente por ID. [exemplo](#con_id)    | 200 OK, 404 Not Found |
+| DELETE      | `/clientes/delete/{id}` | Deletar cliente pelo ID. [exemplo](#delete)     | 200 OK, 404 Not Found |
+| PUT         | `/clientes/update`      | Atualizar dados de um cliente. [exemplo](#update) | 200 OK, 404 Not Found |
+| POST        | `/clientes/add`         | Inserir um novo cliente. [exemplo](#insert)     | 201 Created, 400 Bad Request |
+
 
 
 <h2 id="insert">Inserir</h2>
