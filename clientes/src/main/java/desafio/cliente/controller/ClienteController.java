@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import desafio.cliente.entity.Cliente;
+import desafio.cliente.dto.ClienteDTO;
 import desafio.cliente.service.ClienteService;
 
 @RestController
@@ -26,13 +26,13 @@ public class ClienteController {
     private ClienteService clienteService;
 
     @GetMapping("/listall")
-    public ResponseEntity<List<Cliente>> listarTodosController(){
+    public ResponseEntity<List<ClienteDTO>> listarTodosController(){
         return ResponseEntity.ok(clienteService.listarTodosService());
     }
 
     //Buscando o cliente por id
     @GetMapping("/list/{id}")
-    public ResponseEntity<Optional<Cliente>> buscarPorIdControlller(@PathVariable Integer id){
+    public ResponseEntity<Optional<ClienteDTO>> buscarPorIdControlller(@PathVariable Integer id){
 
         if (clienteService.buscaPorIdService(id).isEmpty()){
             return ResponseEntity.notFound().build();
@@ -43,8 +43,8 @@ public class ClienteController {
 
     //Cadastrando clientes
     @PostMapping("/add")
-    public ResponseEntity<Cliente> cadastrarController(@RequestBody Cliente cliente){
-        return new ResponseEntity<>(clienteService.cadastrarService(cliente), HttpStatus.CREATED);
+    public ResponseEntity<ClienteDTO> cadastrarController(@RequestBody ClienteDTO clienteDTO){
+        return new ResponseEntity<>(clienteService.cadastrarService(clienteDTO), HttpStatus.CREATED);
     }
 
     //Deletar clientes
@@ -56,8 +56,8 @@ public class ClienteController {
 
     //Atualizando o clientes
     @PutMapping("/update")
-    public ResponseEntity<Cliente> atualizarController(@RequestBody Cliente cliente){
-        return ResponseEntity.ok(clienteService.atualizarService(cliente));
+    public ResponseEntity<ClienteDTO> atualizarController(@RequestBody ClienteDTO clienteDTO){
+        return ResponseEntity.ok(clienteService.atualizarService(clienteDTO));
     }
 
 }
