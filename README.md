@@ -30,7 +30,7 @@ Abaixo estão listadas todas as tecnologias utilizadas para a realização deste
 
 <h2 id="begin">🚀 Primeiros Passos</h2>
 
-<p>Para rodar o projeto localmente, você pode optar por simplesmente cloná-lo, abri-lo em uma IDE como intellij ou um editor de código como o visual studio e rodar o ClienteApplication.java</p>
+<p>Para rodar o projeto localmente, você pode optar por simplesmente cloná-lo, abri-lo em uma IDE como intellij ou em um editor de código como o visual studio e rodar o ClienteApplication.java</p>
 
 <p>Para testar os endpoints, pode-se usar softwares que fazem requisições HTTP como insomnia (o qual foi usado para demonstrar os exemplos na seção de endpoints abaixo) ou postman.</p>
 
@@ -43,8 +43,14 @@ Abaixo estão listadas todas as tecnologias utilizadas para a realização deste
 ### Clonando
 
 ```bash
-
+git clone https://github.com/joao72neto/desafio_spring_boot.git
 ```
+
+### Iniciando o Projeto
+
+Executar o arquivo que se encontra no caminho abaixo usando o Vs code ou uma IDE:
+
+`clientes/src/main/java/desafio/cliente/ClienteApplication.java`
 
 <h2 id="end">Endpoints</h2>
 
