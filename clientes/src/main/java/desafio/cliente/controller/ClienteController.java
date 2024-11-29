@@ -51,12 +51,22 @@ public class ClienteController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deletarController(@PathVariable Integer id){
         clienteService.deletarService(id);
+
+        if(clienteService.buscaPorIdService(id).isEmpty()){
+            return ResponseEntity.notFound().build();
+        }
+
         return ResponseEntity.noContent().build();
     }
 
     //Atualizando o clientes
     @PutMapping("/update")
     public ResponseEntity<ClienteDTO> atualizarController(@RequestBody ClienteDTO clienteDTO){
+
+        if(clienteService.buscaPorIdService(clienteDTO.id()).isEmpty()){
+            return ResponseEntity.notFound().build();
+        }
+
         return ResponseEntity.ok(clienteService.atualizarService(clienteDTO));
     }
 
