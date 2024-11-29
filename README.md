@@ -34,7 +34,7 @@ Abaixo estão listadas todas as tecnologias utilizadas para a realização deste
 
 <p>Para testar os endpoints, pode-se usar softwares que fazem requisições HTTP como insomnia (o qual foi usado para demonstrar os exemplos na seção de endpoints abaixo) ou postman.</p>
 
-## Pré-requisitos
+### Pré-requisitos
 
 - [insomnia]() ou [postman]()
 - Visual Studio Code
