@@ -12,7 +12,6 @@ import desafio.cliente.entity.Cliente;
 import desafio.cliente.entity.Contato;
 import desafio.cliente.mapper.ClienteMapper;
 import desafio.cliente.repository.ClienteRepository;
-//import desafio.cliente.repository.ContatoRepository;
 
 @Service
 public class ClienteService {

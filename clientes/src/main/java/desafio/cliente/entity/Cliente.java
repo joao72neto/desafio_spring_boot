@@ -2,6 +2,9 @@ package desafio.cliente.entity;
 
 import java.time.LocalDate;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -19,7 +22,8 @@ public class Cliente {
     @Column
     private LocalDate dataCadastro;
 
-     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<Contato> contatos;
 
 }
