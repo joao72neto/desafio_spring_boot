@@ -24,12 +24,19 @@ Os seguintes requisitos foram atendidos:
 Abaixo estão listadas todas as tecnologias utilizadas para a realização deste desafio:
 
 - Java / Spring Boot
-- Oralce 21c Express
+- Lombok
+- JPA Hibernate
+- Oracle 21c Express
 - Git
 
 <h2 id="begin">🚀 Primeiros Passos</h2>
 
-<p>Para rodar o projeto localmente, você pode optar por simplesmente cloná-lo, abri-lo em uma IDE como intellij ou em um editor de código como o visual studio e rodar o ClienteApplication.java</p>
+### Resumo
+
+<p>Para rodar o projeto localmente, você pode optar por simplesmente cloná-lo, abri-lo em uma IDE como intellij ou em um editor de código como o visual studio e rodar o ClienteApplication.java.</p>
+
+<p>O SGBD utilizado neste projeto foi o Oracle, mas caso queira mudar e utilizar outro, basta mudar o arquivo application.properties. Mais abaixo disponibilizei a configuração para MySQL.
+</p>
 
 <p>Para testar os endpoints, pode-se usar softwares que fazem requisições HTTP como insomnia (o qual foi usado para demonstrar os exemplos na seção de endpoints abaixo) ou postman.</p>
 
@@ -43,6 +50,42 @@ Abaixo estão listadas todas as tecnologias utilizadas para a realização deste
 
 ```bash
 git clone https://github.com/joao72neto/desafio_spring_boot.git
+```
+
+### Configuração do application.properties
+
+`clientes/src/main/resources/application.properties`
+
+#### Oracle
+
+```properties
+# Nome da aplicação (opcional, usado apenas para fins informativos)
+spring.application.name=cliente
+
+# Configurações de conexão com o banco de dados Oracle
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+spring.datasource.username=<SEU USUÁRIO>
+spring.datasource.password=<SUA SENHA>
+
+# Configurações JPA/Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+#### MySQL
+
+```properties
+# Nome da aplicação (opcional, usado apenas para fins informativos)
+spring.application.name=cliente
+
+#Configurações de conexão com o MySQL
+spring.datasource.url=jdbc:mysql://localhost:3306/<NOME DO SEU BANCO>
+spring.datasource.username=<SEU USUÁRIO>
+spring.datasource.password=<SUA SENHA>
+
+# Configurações JPA/Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
 ```
 
 ### Iniciando o Projeto
