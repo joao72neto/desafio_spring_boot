@@ -11,9 +11,7 @@
 
 Projeto back-end Spring Boot que permite o cadastramento (Inserir), a listagem (Consultar todos), a exclusão (Deletar), a pesquisa (Consultar por ID) e a alteração (Atualizar) de clientes seguindo a modelagem abaixo:
 
-<div align="center">
-      <img src="https://github.com/user-attachments/assets/dffa3e6f-3053-4096-a91a-6b94d0ffdd5f"/>
-</div>
+<p><img src="https://github.com/user-attachments/assets/dffa3e6f-3053-4096-a91a-6b94d0ffdd5f"/></p>
 
 Os seguintes requisitos foram atendidos:
 
