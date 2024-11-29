@@ -36,9 +36,15 @@ Abaixo estão listadas todas as tecnologias utilizadas para a realização deste
 
 ### Pré-requisitos
 
-- [insomnia]() ou [postman]()
-- Visual Studio Code
-- 
+- [Insomnia](https://insomnia.rest/download) ou [Postman](https://www.postman.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Oracle Express](https://www.oracle.com/br/database/technologies/xe-downloads.html)
+
+### Clonando
+
+```bash
+
+```
 
 <h2 id="end">Endpoints</h2>
 
