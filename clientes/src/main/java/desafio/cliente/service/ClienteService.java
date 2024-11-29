@@ -7,8 +7,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import desafio.cliente.dto.ClienteDTO;
 import desafio.cliente.entity.Cliente;
 import desafio.cliente.entity.Contato;
+import desafio.cliente.mapper.ClienteMapper;
 import desafio.cliente.repository.ClienteRepository;
 //import desafio.cliente.repository.ContatoRepository;
 
@@ -17,28 +19,33 @@ public class ClienteService {
     
     @Autowired
     private ClienteRepository clienteRepository;
-    //private ContatoRepository contatoRepository;
+    
+    @Autowired
+    private ClienteMapper clienteMapper;
 
     //Listando todos os dados do banco de dados
-    public List<Cliente> listarTodosService(){
-        return clienteRepository.findAll();
+    public List<ClienteDTO> listarTodosService(){
+        return clienteRepository.findAll().stream()
+                            .map(clienteMapper::toDTO)
+                            .toList();
     }
 
     //Buscando cliente por id
-    public Optional<Cliente> buscaPorIdService(Integer id){
-        return clienteRepository.findById(id);
+    public Optional<ClienteDTO> buscaPorIdService(Integer id){
+        return clienteRepository.findById(id).map(clienteMapper::toDTO);
     }
 
     //Cadastrando clientes    
-    public Cliente cadastrarService(Cliente cliente){
+    public ClienteDTO cadastrarService(ClienteDTO clienteDTO){
        
+        Cliente cliente = clienteMapper.toEntity(clienteDTO);
         cliente.setDataCadastro(LocalDate.now());
 
         for (Contato contato : cliente.getContatos()) {
             contato.setCliente(cliente);
         }
 
-        return clienteRepository.save(cliente);
+        return clienteMapper.toDTO(clienteRepository.save(cliente));
     }
 
     //Deletando clientes
@@ -47,14 +54,16 @@ public class ClienteService {
     }
 
     //Atualizando os dados do cliente
-    public Cliente atualizarService(Cliente cliente){
-        Cliente cliente2 = clienteRepository.findById(cliente.getId()).get();
-        cliente2 = cliente;
+    public ClienteDTO atualizarService(ClienteDTO clienteDTO){
+        Cliente cliente = clienteMapper.toEntity(clienteDTO);
+        Cliente cliente_atualizado = clienteRepository.findById(cliente.getId()).get();
+        cliente_atualizado = cliente;
 
-        for (Contato contato : cliente2.getContatos()) {
-            contato.setCliente(cliente2);
+
+        for (Contato contato : cliente_atualizado.getContatos()) {
+            contato.setCliente(cliente_atualizado);
         }
 
-        return clienteRepository.save(cliente2);  
+        return clienteMapper.toDTO(clienteRepository.save(cliente_atualizado));  
     }
 }
