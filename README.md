@@ -2,11 +2,6 @@
 
 <p align="center">
  <a href="#end">Endpoints</a> •
- <a href="#insert">Inserir</a> • 
- <a href="#del">Deletar</a> • 
- <a href="#update">Atualizar</a> • 
- <a href="#con_all">Consultar Todos</a> • 
- <a href="#con_id">Consultar por ID</a>
 </p>
 
 <hr>
@@ -26,11 +21,11 @@ Os seguintes requisitos foram atendidos:
 
 | Método HTTP | Endpoint                | Descrição                 |
 |-------------|-------------------------|---------------------------|
-| GET         | `/clientes/listall`     | Consultar todos os clientes. [response]() |
-| GET         | `/clientes/list/{id}`   | Consultar cliente por ID. [response]()    |
-| DELETE      | `/clientes/delete/{id}` | Deletar cliente pelo ID.     |
-| PUT         | `/clientes/update`      | Atualizar dados de um cliente. [request]()|
-| POST        | `/clientes/add`         | Inserir um novo cliente. [request]()     |
+| GET         | `/clientes/listall`     | Consultar todos os clientes. [exemplo](#con_all) |
+| GET         | `/clientes/list/{id}`   | Consultar cliente por ID. [exemplo](#con_id)    |
+| DELETE      | `/clientes/delete/{id}` | Deletar cliente pelo ID. [exemplo](#delete)     |
+| PUT         | `/clientes/update`      | Atualizar dados de um cliente. [exemplo](#update)|
+| POST        | `/clientes/add`         | Inserir um novo cliente. [exemplo](#insert)     |
 
 
 <h2 id="insert">Inserir</h2>
@@ -177,7 +172,7 @@ RESPONSE
 ]
 ```
 
-<h2 id="con_all">Consultar por ID</h2>
+<h2 id="con_id">Consultar por ID</h2>
 
 Fazendo uma pesquisa pelo cliente de ID 1:
 
@@ -200,7 +195,7 @@ RESPONSE
 }
 ```
 
-<h2 id="insert">Atualizar</h2>
+<h2 id="update">Atualizar</h2>
 
 Mudando o nome do cliente com ID 3 (Lucas) para Joel:
 
@@ -296,3 +291,10 @@ RESPONSE
 	]
 }
 ```
+
+<h2 id="delete">Deletar</h2>
+
+Deletando o usuário com ID 1 (João):
+
+`/clientes/delete/1`
+
