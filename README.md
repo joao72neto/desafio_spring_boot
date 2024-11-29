@@ -4,12 +4,15 @@
  <a href="#context">Contextualização</a> •
  <a href="#tech">Tecnologias</a> •
  <a href="#begin">Primeiros Passos</a> •
- <a href="#end">Endpoints</a>
+ <a href="#end">Endpoints</a> •
+ <a href="#bd">Banco de Dados</a>
 </p>
 
 <h2 id="context">Contextualização</h2>
 
-Projeto back-end Spring Boot que permite o cadastramento (Inserir), a listagem (Consultar todos), a exclusão (Deletar), a pesquisa (Consultar por ID) e a alteração (Atualizar) de clientes seguindo a modelagem abaixo:
+<p>Este projeto faz parte de um desafio proposto para uma vaga de estágio, com o objetivo de demonstrar habilidades no desenvolvimento de APIs RESTful utilizando Spring Boot, além de boas práticas como uso de DTOs e mapeamento com ModelMapper</p>
+
+<p>Ele permite o cadastramento (Inserir), a listagem (Consultar todos), a exclusão (Deletar), a pesquisa (Consultar por ID) e a alteração (Atualizar) de clientes de acordo com a modelagem abaixo:</p>
 
 <p><img src="https://github.com/user-attachments/assets/dffa3e6f-3053-4096-a91a-6b94d0ffdd5f"/></p>
 
@@ -24,8 +27,9 @@ Os seguintes requisitos foram atendidos:
 Abaixo estão listadas todas as tecnologias utilizadas para a realização deste desafio:
 
 - Java / Spring Boot
+- Maper
 - Lombok
-- JPA Hibernate
+- JPA / Hibernate
 - Oracle 21c Express
 - Git
 
@@ -35,10 +39,10 @@ Abaixo estão listadas todas as tecnologias utilizadas para a realização deste
 
 <p>Para rodar o projeto localmente, você pode optar por simplesmente cloná-lo, abri-lo em uma IDE como intellij ou em um editor de código como o visual studio e rodar o ClienteApplication.java.</p>
 
-<p>O SGBD utilizado neste projeto foi o Oracle, mas caso queira mudar e utilizar outro, basta mudar o arquivo application.properties. Mais abaixo disponibilizei a configuração para MySQL.
+<p>O SGBD utilizado neste projeto foi o Oracle, mas caso queira mudar e utilizar outro, basta modificar o arquivo application.properties. Mais abaixo disponibilizei a <a href="#mysql">configuração para o MySQL</a>.
 </p>
 
-<p>Para testar os endpoints, pode-se usar softwares que fazem requisições HTTP como insomnia (o qual foi usado para demonstrar os exemplos na seção de endpoints abaixo) ou postman.</p>
+<p>Para testar os endpoints, pode-se utilizar softwares que fazem requisições HTTP como insomnia (o qual foi usado para demonstrar os exemplos na seção de endpoints abaixo) ou postman.</p>
 
 ### Pré-requisitos
 
@@ -72,7 +76,7 @@ spring.datasource.password=<SUA SENHA>
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 ```
-#### MySQL
+<h4 id="mysql">MySQL</h4>
 
 ```properties
 # Nome da aplicação (opcional, usado apenas para fins informativos)
@@ -90,7 +94,7 @@ spring.jpa.show-sql=true
 
 ### Iniciando o Projeto
 
-Executar o arquivo que se encontra no caminho abaixo usando o Vs code ou uma IDE:
+Execute o arquivo que se encontra no caminho abaixo usando o vs code ou uma IDE:
 
 `clientes/src/main/java/desafio/cliente/ClienteApplication.java`
 
@@ -100,7 +104,7 @@ Executar o arquivo que se encontra no caminho abaixo usando o Vs code ou uma IDE
 |-------------|-------------------------|---------------------------|------------------------|
 | GET         | `/clientes/listall`     | Consultar todos os clientes. [exemplo](#con_all) | 200 OK |
 | GET         | `/clientes/list/{id}`   | Consultar cliente por ID. [exemplo](#con_id)    | 200 OK, 404 Not Found |
-| DELETE      | `/clientes/delete/{id}` | Deletar cliente pelo ID. [exemplo](#delete)     | 200 OK, 404 Not Found |
+| DELETE      | `/clientes/delete/{id}` | Deletar cliente pelo ID. [exemplo](#delete)     | 204 No Content, 404 Not Found |
 | PUT         | `/clientes/update`      | Atualizar dados de um cliente. [exemplo](#update) | 200 OK, 404 Not Found |
 | POST        | `/clientes/add`         | Inserir um novo cliente. [exemplo](#insert)     | 201 Created, 400 Bad Request |
 
@@ -375,4 +379,20 @@ RESPONSE
 Deletando o usuário com ID 1 (João):
 
 `/clientes/delete/1`
+
+<h2 id="bd">Banco de Dados</h2>
+
+Confira abaixo como os dados ficam organizados no banco de dados:
+
+### Clientes
+
+![image](https://github.com/user-attachments/assets/3825cae8-924a-477b-847c-ea3b857ea12e)
+
+
+### Contatos
+
+![image](https://github.com/user-attachments/assets/beddd6f4-6c2b-47fa-9f7f-ec818565edec)
+
+## Conclusão
+Este projeto foi desenvolvido como parte de um desafio técnico para a vaga de estágio, visando demonstrar conhecimentos em desenvolvimento backend com Spring Boot. 
 
