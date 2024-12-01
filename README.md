@@ -1,7 +1,6 @@
 <h1 align="center" style="font-weight: bold;">Desafio Spring Boot <img src="https://devkico.itexto.com.br/wp-content/uploads/2014/08/spring-boot-project-logo.png" width=30px></h1> 
 
 <p align="center">
- <a href="#context">Contextualização</a> •
  <a href="#tech">Tecnologias</a> •
  <a href="#begin">Primeiros Passos</a> •
  <a href="#end">Endpoints</a> •
